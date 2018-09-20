@@ -1,0 +1,24 @@
+header{
+    color: #fff;
+    padding: 53px 0;
+    margin-bottom: 78px;
+    nav{
+        ul{
+            display: flex;
+            justify-content: space-between;
+            li{
+                a{
+                    font-family: $font-open;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 4.4px;
+                    font-size: 18px;
+                    transition: $transition;
+                    &:hover{
+                        opacity: .5;
+                    }
+                }
+            }
+        }
+    }
+}

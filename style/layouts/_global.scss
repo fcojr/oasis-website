@@ -1,0 +1,27 @@
+body{
+    background-color: $purple-10; 
+}
+a{
+    color: #fff;
+}
+*{
+    margin: 0;
+}
+ul{
+    padding: 0;
+    li{
+        list-style: none;
+    }
+}
+a{
+    &.btn{
+        border-radius: 3px;
+        background: $purple-5;
+        padding: 15px 20px;
+        font-family: $font-open;
+        transition: $transition;
+        &:hover{
+            opacity: .7;
+        }
+    }
+}

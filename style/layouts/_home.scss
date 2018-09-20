@@ -1,0 +1,93 @@
+#home{
+    .top-home{
+        display: flex;
+        justify-content: space-around;
+        .presentation{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 380px;
+            h1{
+                font-family: $font-fjalla;
+                font-size: 70px;
+                font-weight: 400;
+                line-height: 76px;
+                text-transform: uppercase;
+                color: #fff;
+                margin: 0;
+            }
+            p{
+                color: #fff;
+                font-family: $font-open;
+                font-size: 24px;
+                font-weight: 300;
+                margin-bottom: 50px;
+            }
+            .btn{
+                display: flex;
+                width: 263px;
+                justify-content: space-between;
+                align-items: center;
+                span{
+                    display: block;
+                    &.download-from{
+                        font-size: 12px;
+                        text-transform: uppercase;
+                        letter-spacing: 1.4px;
+                    }
+                    &.app-store{
+                        font-size: 26px;
+                        font-weight: 700;
+                        line-height: 26px;
+                    }
+                }
+                .apple{
+                    &:before{
+                        content: '';
+                        background-image: url('img/apple.png');
+                        width: 31px;
+                        height: 37px;
+                        background-size: cover;
+                        display: block;
+                    }
+                }
+            }
+        }
+        .info-cards{
+            padding: 0 34px;
+            background-color: $purple-2;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            max-width: 300px;
+            .text-card{
+                .header{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 40px 0;
+                    .arrow{
+                        &:before{
+                            content: '';
+                            background-image: url('img/arrow.png');
+                            width: 23px;
+                            height: 19px;
+                            display: block;
+                            background-size: cover;
+                        }
+                    }
+                    span{
+                        color: $purple-10;
+                        font-family: $font-fjalla;
+                        font-size: 30px;
+                        font-weight: 400;
+                        line-height: 28px;
+                    }
+                }
+                p{
+                    color: #212b36;
+                    font-family: $font-open;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
