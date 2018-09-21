@@ -1,13 +1,16 @@
-#home{
-    .top-home{
+#home {
+    .top-home {
         display: flex;
-        justify-content: space-around;
-        .presentation{
+        align-items: center;
+        max-width: 780px;
+        margin: 0 auto;
+        .presentation {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            max-width: 380px;
-            h1{
+            flex: 5;
+            margin-right: 100px;
+            h1 {
                 font-family: $font-fjalla;
                 font-size: 70px;
                 font-weight: 400;
@@ -16,33 +19,37 @@
                 color: #fff;
                 margin: 0;
             }
-            p{
+
+            p {
                 color: #fff;
                 font-family: $font-open;
                 font-size: 24px;
                 font-weight: 300;
                 margin-bottom: 50px;
             }
-            .btn{
+
+            .btn {
                 display: flex;
                 width: 263px;
                 justify-content: space-between;
                 align-items: center;
-                span{
+                span {
                     display: block;
-                    &.download-from{
+                    &.download-from {
                         font-size: 12px;
                         text-transform: uppercase;
                         letter-spacing: 1.4px;
                     }
-                    &.app-store{
+
+                    &.app-store {
                         font-size: 26px;
                         font-weight: 700;
                         line-height: 26px;
                     }
                 }
-                .apple{
-                    &:before{
+
+                .apple {
+                    &:before {
                         content: '';
                         background-image: url('img/apple.png');
                         width: 31px;
@@ -53,19 +60,34 @@
                 }
             }
         }
-        .info-cards{
-            padding: 0 34px;
+
+        .info-cards {
             background-color: $purple-2;
             border-top-left-radius: 3px;
             border-top-right-radius: 3px;
-            max-width: 300px;
-            .text-card{
-                .header{
+            flex: 4;
+            .label {
+                display: block;
+                font-size: 12px;
+                margin-top: 10px;
+                text-transform: uppercase;
+            }
+
+            .number {
+                font-family: $font-fjalla;
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 28px;
+            }
+
+            .text-card {
+                padding: 0 35px 20px;
+                .header {
                     display: flex;
                     justify-content: space-between;
                     padding: 40px 0;
-                    .arrow{
-                        &:before{
+                    .arrow {
+                        &:before {
                             content: '';
                             background-image: url('img/arrow.png');
                             width: 23px;
@@ -73,19 +95,112 @@
                             display: block;
                             background-size: cover;
                         }
+
                     }
-                    span{
+
+                    span {
                         color: $purple-10;
                         font-family: $font-fjalla;
                         font-size: 30px;
                         font-weight: 400;
                         line-height: 28px;
                     }
+
                 }
-                p{
-                    color: #212b36;
+
+                .content {
+                    p {
+                        color: #212b36;
+                        font-family: $font-open;
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .performance-card {
+                background-color: #fff;
+                display: flex;
+                padding: 20px 15px;
+                align-items: center;
+                justify-content: space-between;
+                border-top: 1px solid #ddd;
+                .graph {
+                    max-width: 170px;
+                }
+            }
+        }
+    }
+
+    .bottom-home {
+        border-radius: 3px;
+        background-color: #fff;
+        box-shadow: 0 2px 11px rgba(0, 0, 0, 0.55);
+        position: relative;
+        .summary {
+            .top-summary {
+                padding: 45px 30px;
+                border-bottom: 1px solid #ddd;
+
+                ul {
+
+                    display: flex;
+                    justify-content: space-between;
+
+                    li {
+                        color: #575757;
+                        font-family: $font-open;
+                        font-size: 18px;
+                        font-weight: 300;
+                        display: flex;
+                        align-items: center;
+                        padding: 0 30px;
+                        flex: 1;
+
+                        &:nth-child(2) {
+                            border-right: 1px solid #ddd;
+                            border-left: 1px solid #ddd;
+                        }
+
+                        .icon {
+                            padding-right: 15px;
+
+                            &:before {
+                                content: '';
+                                width: 50px;
+                                height: 50px;
+                                display: block;
+                                background-size: cover;
+                            }
+
+                            &.github {
+                                &:before {
+                                    background-image: url('img/summary-github.png');
+                                }
+                            }
+
+                            &.cpu {
+                                &:before {
+                                    background-image: url('img/summary-cpu.png');
+                                }
+                            }
+
+                            &.money {
+                                &:before {
+                                    background-image: url('img/summary-dollar.png');
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .bottom-summary { 
+                padding: 50px 50px 10px;
+                p {
+                    color: #575757;
                     font-family: $font-open;
-                    font-size: 14px;
+                    font-size: 18px;
+                    font-weight: 300;
                 }
             }
         }

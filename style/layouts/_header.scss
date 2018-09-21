@@ -1,8 +1,10 @@
 header{
     color: #fff;
     padding: 53px 0;
-    margin-bottom: 78px;
+    margin-bottom: 80px;
     nav{
+        max-width: 1050px;
+        margin: 0 auto;
         ul{
             display: flex;
             justify-content: space-between;

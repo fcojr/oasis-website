@@ -1,18 +1,23 @@
 body{
-    background-color: $purple-10; 
+    background-color: $purple-10;
+    font-family: $font-open;
 }
+
 a{
     color: #fff;
 }
+
 *{
     margin: 0;
 }
+
 ul{
     padding: 0;
     li{
         list-style: none;
     }
 }
+
 a{
     &.btn{
         border-radius: 3px;
