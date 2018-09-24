@@ -1,0 +1,59 @@
+#snippets{
+    margin-top: 100px;
+
+    .snippets-wrapper{
+        display: flex;
+
+        .snippets-boxes{
+            flex: 3.2;
+            margin-right: 35px;
+        }
+
+        .snippets-card{
+            border-radius: 3px;
+            background-color: $purple-5;
+            padding: 60px 20px 80px 40px;
+            flex: 2.8;
+            align-self: flex-start;
+            margin-top: 165px;
+            position: relative;
+            &:after{
+                content: '';
+                width: 74px;
+                height: 206px;
+                background-color: #fff;
+                position: absolute;
+                top: -180px;
+                right: 42px;
+                background: url('img/info.png');
+            }
+            &:before{
+                content: '';
+                width: 241px;
+                height: 241px;
+                background-image: url('img/Oval_3.png');
+                position: absolute;
+                top: -271px;
+                right: -30px;
+            }
+
+            h2{
+                color: #fff;
+                font-family: $font-fjalla;
+                font-size: 55px;
+                font-weight: 400;
+                line-height: 64px;
+                text-transform: uppercase;
+                margin-bottom: 80px;
+            }
+
+            p{
+                color: #fff;
+                font-family: $font-open;
+                font-size: 24px;
+                font-weight: 300;
+                line-height: 33px;
+            }
+        }
+    }
+}

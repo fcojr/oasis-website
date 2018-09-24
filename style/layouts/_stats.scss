@@ -1,0 +1,13 @@
+#stats{
+    .snippets-box{
+        max-width: 860px;
+        justify-content: space-between;
+        padding: 10px 35px;
+        margin: 35px auto;
+        flex-wrap: wrap;
+        align-items: center;
+        span{
+            font-size: 34px;
+        }
+    }   
+}

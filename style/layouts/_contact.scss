@@ -1,0 +1,46 @@
+#contact{
+    padding: 200px 0;
+    background: url('img/contact-bg.png');
+
+    form{
+        display: flex;
+        justify-content: center;
+
+        input{
+            padding: 20px 30px;
+            color: $purple-10;
+            font-size: 25px;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+        ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: #c4bebe;
+            font-family: $font-open;
+            font-size: 25px;
+            font-weight: 300;
+        }
+
+        button{
+            background-color: $purple-5;
+            color: #fff;
+            border: 0;
+            padding: 0 25px;
+            font-size: 25px;
+            font-weight: 300;
+            font-family: $font-open;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            transition: $transition;
+            &:hover{
+                opacity: .7s;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    .subhead{
+        margin: 30px auto 50px;
+        max-width: 520px;
+    }
+}

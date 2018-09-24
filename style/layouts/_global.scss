@@ -30,3 +30,55 @@ a{
         }
     }
 }
+
+section{
+    padding: 50px 0;
+    display: inline-block;
+    width: 100%;
+
+    h2{
+        font-family: $font-fjalla;
+        font-size: 55px;
+        font-weight: 400;
+        line-height: 64px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #fff;
+    }
+
+    .subhead{
+        font-family: $font-open;
+        font-size: 25px;
+        font-weight: 300;
+        text-align: center;
+        color: #fff;
+    }
+}
+.snippets-box{
+    border-radius: 3px;
+    border: 1px solid $purple-5;
+    background-color: #2d2a48;
+    padding: 35px 20px 35px 35px;
+    display: flex;
+    margin-bottom: 30px;
+    transition: $transition;
+    &:hover{
+        transform: scale(1.05);
+        cursor: default;
+    }
+
+    p{
+        color: $purple-4;
+        font-family: $font-open;
+        font-size: 24px;
+    }
+
+    span{
+        color: #fbfbfb;
+        font-family: $font-fjalla;
+        font-size: 50px;
+        font-weight: 400;
+        padding-left: 10px;
+    }
+}
