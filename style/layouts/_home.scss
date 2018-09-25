@@ -1,4 +1,9 @@
 #home {
+    background-image: url('img/lines.svg');
+    background-repeat: no-repeat;
+    background-position: left bottom 50px;
+    background-size: 100%;
+
     .top-home {
         display: flex;
         align-items: center;

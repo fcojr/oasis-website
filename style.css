@@ -1507,6 +1507,9 @@ body {
   background-color: #27253f;
   font-family: "Open Sans", sans-serif; }
 
+main {
+  padding-top: 80px; }
+
 a {
   color: #fff; }
 
@@ -1528,7 +1531,7 @@ a.btn {
     opacity: .7; }
 
 section {
-  padding: 50px 0;
+  padding: 80px 0 50px;
   display: inline-block;
   width: 100%; }
   section h2 {
@@ -1571,7 +1574,17 @@ section {
 
 header {
   color: #fff;
-  padding: 53px 0; }
+  padding: 53px 0;
+  transition: 0.3s;
+  position: fixed;
+  width: 100%; }
+  header.fixed {
+    background: #38355a;
+    padding: 20px 0;
+    z-index: 2;
+    box-shadow: 0 4px 2px -2px #1f1d34; }
+    header.fixed li a {
+      font-size: 14px; }
   header nav {
     max-width: 1050px;
     margin: 0 auto; }
@@ -1588,162 +1601,166 @@ header {
         header nav ul li a:hover {
           opacity: .5; }
 
-#home .top-home {
-  display: flex;
-  align-items: center;
-  max-width: 780px;
-  margin: 0 auto; }
-  #home .top-home .presentation {
+#home {
+  background-image: url("img/lines.svg");
+  background-repeat: no-repeat;
+  background-position: left bottom 50px;
+  background-size: 100%; }
+  #home .top-home {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex: 5;
-    margin-right: 100px; }
-    #home .top-home .presentation h1 {
-      font-family: "Fjalla One", sans-serif;
-      font-size: 70px;
-      font-weight: 400;
-      line-height: 76px;
-      text-transform: uppercase;
-      color: #fff;
-      margin: 0; }
-    #home .top-home .presentation p {
-      color: #fff;
-      font-family: "Open Sans", sans-serif;
-      font-size: 24px;
-      font-weight: 300;
-      margin-bottom: 50px;
-      text-align: left; }
-    #home .top-home .presentation .btn {
+    align-items: center;
+    max-width: 780px;
+    margin: 0 auto; }
+    #home .top-home .presentation {
       display: flex;
-      width: 263px;
-      justify-content: space-between;
-      align-items: center; }
-      #home .top-home .presentation .btn span {
-        display: block; }
-        #home .top-home .presentation .btn span.download-from {
-          font-size: 12px;
-          text-transform: uppercase;
-          letter-spacing: 1.4px; }
-        #home .top-home .presentation .btn span.app-store {
-          font-size: 26px;
-          font-weight: 700;
-          line-height: 26px; }
-      #home .top-home .presentation .btn .apple:before {
-        content: '';
-        background-image: url("img/apple.png");
-        width: 31px;
-        height: 37px;
-        background-size: cover;
-        display: block; }
-  #home .top-home .info-cards {
-    background-color: #f6f2fe;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    flex: 4; }
-    #home .top-home .info-cards .label {
-      display: block;
-      font-size: 12px;
-      margin-top: 10px;
-      text-transform: uppercase; }
-    #home .top-home .info-cards .number {
-      font-family: "Fjalla One", sans-serif;
-      font-size: 24px;
-      font-weight: 400;
-      line-height: 28px; }
-    #home .top-home .info-cards .text-card {
-      padding: 0 35px 20px; }
-      #home .top-home .info-cards .text-card .header {
-        display: flex;
-        justify-content: space-between;
-        padding: 40px 0; }
-        #home .top-home .info-cards .text-card .header .arrow:before {
-          content: '';
-          background-image: url("img/arrow.png");
-          width: 23px;
-          height: 19px;
-          display: block;
-          background-size: cover; }
-        #home .top-home .info-cards .text-card .header span {
-          color: #27253f;
-          font-family: "Fjalla One", sans-serif;
-          font-size: 30px;
-          font-weight: 400;
-          line-height: 28px; }
-      #home .top-home .info-cards .text-card .content p {
-        color: #212b36;
+      flex-direction: column;
+      align-items: flex-start;
+      flex: 5;
+      margin-right: 100px; }
+      #home .top-home .presentation h1 {
+        font-family: "Fjalla One", sans-serif;
+        font-size: 70px;
+        font-weight: 400;
+        line-height: 76px;
+        text-transform: uppercase;
+        color: #fff;
+        margin: 0; }
+      #home .top-home .presentation p {
+        color: #fff;
         font-family: "Open Sans", sans-serif;
-        font-size: 14px; }
-    #home .top-home .info-cards .performance-card {
-      background-color: #fff;
-      display: flex;
-      padding: 20px 15px;
-      align-items: center;
-      justify-content: space-between;
-      border-top: 1px solid #ddd; }
-      #home .top-home .info-cards .performance-card .graph {
-        max-width: 170px; }
-
-#home .bottom-home {
-  border-radius: 3px;
-  background-color: #fff;
-  box-shadow: 0 2px 11px rgba(0, 0, 0, 0.55);
-  position: relative; }
-  #home .bottom-home:before {
-    content: '';
-    position: absolute;
-    background-image: url("img/lines.svg"); }
-  #home .bottom-home .summary .top-summary {
-    padding: 45px 30px;
-    border-bottom: 1px solid #ddd; }
-    #home .bottom-home .summary .top-summary ul {
-      display: flex;
-      justify-content: space-between; }
-      #home .bottom-home .summary .top-summary ul li {
-        color: #575757;
-        font-family: "Open Sans", sans-serif;
-        font-size: 18px;
+        font-size: 24px;
         font-weight: 300;
+        margin-bottom: 50px;
+        text-align: left; }
+      #home .top-home .presentation .btn {
         display: flex;
-        align-items: center;
-        padding: 0 30px;
-        flex: 1; }
-        #home .bottom-home .summary .top-summary ul li:nth-child(2) {
-          border-right: 1px solid #ddd;
-          border-left: 1px solid #ddd; }
-        #home .bottom-home .summary .top-summary ul li .icon {
-          padding-right: 15px; }
-          #home .bottom-home .summary .top-summary ul li .icon:before {
+        width: 263px;
+        justify-content: space-between;
+        align-items: center; }
+        #home .top-home .presentation .btn span {
+          display: block; }
+          #home .top-home .presentation .btn span.download-from {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.4px; }
+          #home .top-home .presentation .btn span.app-store {
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 26px; }
+        #home .top-home .presentation .btn .apple:before {
+          content: '';
+          background-image: url("img/apple.png");
+          width: 31px;
+          height: 37px;
+          background-size: cover;
+          display: block; }
+    #home .top-home .info-cards {
+      background-color: #f6f2fe;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      flex: 4; }
+      #home .top-home .info-cards .label {
+        display: block;
+        font-size: 12px;
+        margin-top: 10px;
+        text-transform: uppercase; }
+      #home .top-home .info-cards .number {
+        font-family: "Fjalla One", sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 28px; }
+      #home .top-home .info-cards .text-card {
+        padding: 0 35px 20px; }
+        #home .top-home .info-cards .text-card .header {
+          display: flex;
+          justify-content: space-between;
+          padding: 40px 0; }
+          #home .top-home .info-cards .text-card .header .arrow:before {
             content: '';
-            width: 50px;
-            height: 50px;
+            background-image: url("img/arrow.png");
+            width: 23px;
+            height: 19px;
             display: block;
             background-size: cover; }
-          #home .bottom-home .summary .top-summary ul li .icon.github:before {
-            background-image: url("img/summary-github.png"); }
-          #home .bottom-home .summary .top-summary ul li .icon.cpu:before {
-            background-image: url("img/summary-cpu.png"); }
-          #home .bottom-home .summary .top-summary ul li .icon.money:before {
-            background-image: url("img/summary-dollar.png"); }
-  #home .bottom-home .summary .bottom-summary {
-    padding: 50px 50px 10px;
-    display: flex; }
-    #home .bottom-home .summary .bottom-summary .summary-text {
-      flex: 3; }
-      #home .bottom-home .summary .bottom-summary .summary-text p {
-        color: #575757;
-        font-family: "Open Sans", sans-serif;
-        font-size: 18px;
-        font-weight: 300; }
-    #home .bottom-home .summary .bottom-summary .summary-title {
-      flex: 2; }
-      #home .bottom-home .summary .bottom-summary .summary-title h2 {
-        color: #27253f;
-        font-family: "Fjalla One", sans-serif;
-        font-size: 55px;
-        font-weight: 400;
-        text-transform: uppercase;
-        text-align: right; }
+          #home .top-home .info-cards .text-card .header span {
+            color: #27253f;
+            font-family: "Fjalla One", sans-serif;
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 28px; }
+        #home .top-home .info-cards .text-card .content p {
+          color: #212b36;
+          font-family: "Open Sans", sans-serif;
+          font-size: 14px; }
+      #home .top-home .info-cards .performance-card {
+        background-color: #fff;
+        display: flex;
+        padding: 20px 15px;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid #ddd; }
+        #home .top-home .info-cards .performance-card .graph {
+          max-width: 170px; }
+  #home .bottom-home {
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0 2px 11px rgba(0, 0, 0, 0.55);
+    position: relative; }
+    #home .bottom-home:before {
+      content: '';
+      position: absolute;
+      background-image: url("img/lines.svg"); }
+    #home .bottom-home .summary .top-summary {
+      padding: 45px 30px;
+      border-bottom: 1px solid #ddd; }
+      #home .bottom-home .summary .top-summary ul {
+        display: flex;
+        justify-content: space-between; }
+        #home .bottom-home .summary .top-summary ul li {
+          color: #575757;
+          font-family: "Open Sans", sans-serif;
+          font-size: 18px;
+          font-weight: 300;
+          display: flex;
+          align-items: center;
+          padding: 0 30px;
+          flex: 1; }
+          #home .bottom-home .summary .top-summary ul li:nth-child(2) {
+            border-right: 1px solid #ddd;
+            border-left: 1px solid #ddd; }
+          #home .bottom-home .summary .top-summary ul li .icon {
+            padding-right: 15px; }
+            #home .bottom-home .summary .top-summary ul li .icon:before {
+              content: '';
+              width: 50px;
+              height: 50px;
+              display: block;
+              background-size: cover; }
+            #home .bottom-home .summary .top-summary ul li .icon.github:before {
+              background-image: url("img/summary-github.png"); }
+            #home .bottom-home .summary .top-summary ul li .icon.cpu:before {
+              background-image: url("img/summary-cpu.png"); }
+            #home .bottom-home .summary .top-summary ul li .icon.money:before {
+              background-image: url("img/summary-dollar.png"); }
+    #home .bottom-home .summary .bottom-summary {
+      padding: 50px 50px 10px;
+      display: flex; }
+      #home .bottom-home .summary .bottom-summary .summary-text {
+        flex: 3; }
+        #home .bottom-home .summary .bottom-summary .summary-text p {
+          color: #575757;
+          font-family: "Open Sans", sans-serif;
+          font-size: 18px;
+          font-weight: 300; }
+      #home .bottom-home .summary .bottom-summary .summary-title {
+        flex: 2; }
+        #home .bottom-home .summary .bottom-summary .summary-title h2 {
+          color: #27253f;
+          font-family: "Fjalla One", sans-serif;
+          font-size: 55px;
+          font-weight: 400;
+          text-transform: uppercase;
+          text-align: right; }
 
 #snippets {
   margin-top: 100px; }
@@ -1853,7 +1870,8 @@ header {
 
 #contact {
   padding: 200px 0;
-  background: url("img/contact-bg.png"); }
+  background: url("img/contact-bg.png");
+  border-top: 10px solid #7d5bbe; }
   #contact form {
     display: flex;
     justify-content: center; }
