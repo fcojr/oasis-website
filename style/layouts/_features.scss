@@ -1,4 +1,83 @@
 #features{
-    
+    .features-wrapper{
+        display: flex;
+        max-width: 1150px;
+        margin: 70px auto 0;
+        align-items: flex-start;
+
+        @media(max-width: 979px){
+            flex-direction: column;
+            padding: 0 10px;
+        }
+
+        .info-cards{
+            margin: 0 50px;
+
+            .arrow{
+                &:before{
+                    width: 36px;
+                    height: 30px;
+                }
+            }
+
+            .header{
+                padding: 60px 0;
+
+                span{
+                    font-size: 40px;
+                }
+            }
+
+            .label{
+                font-size: 16px;
+            }
+            
+            .number{
+                font-size: 34px;
+            }
+
+            p{
+                font-size: 16px;
+            }
+
+            .performance-card{
+                padding: 40px 15px;
+            }
+
+            .text-card{
+                padding: 0 35px 40px;
+                .label{
+                    margin: 30px 0;
+                }
+            }
+        }
+
+        .features-left, .features-right{
+            flex: 3;
+            font-family: $font-open;
+            font-size: 25px;
+            font-weight: 300;
+            color: #fff;
+            margin-top: 80px;
+            
+            @media(max-width: 979px){
+                text-align: center!important;
+                margin-top: 0;
+            }
+
+            .feature{
+                display: inline-block;
+                margin: 15px 0;
+            }
+        }
+
+        .features-left{
+            text-align: right;
+        }
+
+        .features-right{
+            text-align: left;
+        }
+    }
 
 }

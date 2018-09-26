@@ -4,9 +4,17 @@
     .snippets-wrapper{
         display: flex;
 
+        @media(max-width: 979px){
+            flex-direction: column;
+        }
+
         .snippets-boxes{
             flex: 3.2;
             margin-right: 35px;
+
+            @media(max-width: 979px){
+                margin-right: 0;
+            }
         }
 
         .snippets-card{
@@ -17,6 +25,11 @@
             align-self: flex-start;
             margin-top: 165px;
             position: relative;
+
+            @media(max-width: 979px){
+                margin-top: 80px;
+            }
+
             &:after{
                 content: '';
                 width: 74px;
@@ -26,7 +39,12 @@
                 top: -180px;
                 right: 42px;
                 background: url('img/info.png');
+
+                @media(max-width: 979px){
+                    display: none;
+                }
             }
+
             &:before{
                 content: '';
                 width: 241px;
@@ -35,6 +53,10 @@
                 position: absolute;
                 top: -271px;
                 right: -30px;
+
+                @media(max-width: 979px){
+                    display: none;
+                }
             }
 
             h2{

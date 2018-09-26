@@ -4,6 +4,11 @@ header{
     transition: $transition;
     position: fixed;
     width: 100%;
+
+    @media(max-width: 1024px){
+        text-align: right;
+    }
+
     &.fixed{
         background: $purple-7;
         padding: 20px 0;
@@ -18,9 +23,22 @@ header{
     nav{
         max-width: 1050px;
         margin: 0 auto;
+
+        
         ul{
             display: flex;
             justify-content: space-between;
+            
+            @media(max-width: 1024px){
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                &.active{
+                    display: flex;
+                }
+            }
+
+
             li{
                 a{
                     font-family: $font-open;
@@ -29,11 +47,28 @@ header{
                     letter-spacing: 4.4px;
                     font-size: 18px;
                     transition: $transition;
+
                     &:hover{
                         opacity: .5;
                     }
+
+                    @media(max-width: 1024px){
+                        padding: 10px 0;
+                        display: inline-block;
+                    }
                 }
             }
+        }
+    }
+
+    .menu-toggle{
+        display: none;
+        font-size: 32px;
+        text-align: right;
+        padding: 0 25px;
+
+        @media(max-width: 1024px){
+            display: inline-block;
         }
     }
 }

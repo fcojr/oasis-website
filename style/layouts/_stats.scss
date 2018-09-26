@@ -1,4 +1,8 @@
 #stats{
+    @media(max-width: 979px){
+        padding: 0 10px;
+    }
+
     .snippets-box{
         max-width: 860px;
         justify-content: space-between;
@@ -6,6 +10,7 @@
         margin: 35px auto;
         flex-wrap: wrap;
         align-items: center;
+
         span{
             font-size: 34px;
         }

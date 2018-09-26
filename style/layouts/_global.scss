@@ -67,6 +67,11 @@ section{
     display: flex;
     margin-bottom: 30px;
     transition: $transition;
+
+    @media(max-width: 979px){
+        justify-content: space-between;
+    }
+
     &:hover{
         transform: scale(1.05);
         cursor: default;
@@ -84,5 +89,78 @@ section{
         font-size: 50px;
         font-weight: 400;
         padding-left: 10px;
+    }
+}
+
+.info-cards {
+    background-color: $purple-2;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    flex: 4;
+
+    .label {
+        display: block;
+        font-size: 12px;
+        margin-top: 10px;
+        text-transform: uppercase;
+    }
+
+    .number {
+        font-family: $font-fjalla;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 28px;
+    }
+
+    .text-card {
+        padding: 0 35px 20px;
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px 0;
+
+            .arrow {
+                &:before {
+                    content: '';
+                    background-image: url('img/arrow.png');
+                    width: 23px;
+                    height: 19px;
+                    display: block;
+                    background-size: cover;
+                }
+
+            }
+
+            span {
+                color: $purple-10;
+                font-family: $font-fjalla;
+                font-size: 30px;
+                font-weight: 400;
+                line-height: 28px;
+            }
+
+        }
+
+        .content {
+            p {
+                color: #212b36;
+                font-family: $font-open;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .performance-card {
+        background-color: #fff;
+        display: flex;
+        padding: 20px 15px;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid #ddd;
+        
+        .graph {
+            margin-left: 50px;
+        }
     }
 }

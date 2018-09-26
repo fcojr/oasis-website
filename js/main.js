@@ -5,6 +5,10 @@ menuLinks.forEach((link) => {
         let hash = link.getAttribute('href');
         let elmnt = document.querySelector(hash);
         elmnt.scrollIntoView({behavior: 'smooth', block: 'start'});
+        let menu = document.querySelector('nav ul');
+        if(menu.classList.contains('active')){
+            menu.classList.remove('active');
+        }
     });
 });
 
@@ -18,4 +22,12 @@ window.addEventListener('scroll', e =>{
     else{
         document.querySelector('header').classList.remove('fixed');
     }
+});
+
+
+var button = document.querySelector('.menu-toggle');
+var menu = document.querySelector('nav ul');
+button.addEventListener('click', e => {
+    e.preventDefault();
+    menu.classList.toggle('active');
 });

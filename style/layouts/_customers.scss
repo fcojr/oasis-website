@@ -16,6 +16,11 @@
             display: inline-block;
             width: 50%;
             vertical-align: middle;
+
+            @media(max-width: 979px){
+                display: block;
+                margin: 0 auto;
+            }
         }
 
         figcaption{
@@ -26,6 +31,11 @@
             line-height: 22px;
             padding: 80px 50px;
             text-align: left;
+
+            @media(max-width: 979px){
+                width: 100%;
+            }
+
             h3{
                 margin-bottom: 10px;
                 color: $purple-10;
@@ -37,9 +47,9 @@
 
         .owl-nav{
             position: absolute;
-            left: -35px;
-            top: 50%;
-            transform: translateY(-50%);
+            left: 50%;
+            top: 0;
+            transform: translate(-50%, -50%);
 
             button{
                 display: block;
@@ -49,6 +59,10 @@
                 color: $purple-5;
                 font-size: 30px;
                 border: 1px solid #fff;
+
+                @media(max-width: 979px){
+                    display: inline-block;
+                }
             }
         }
     }

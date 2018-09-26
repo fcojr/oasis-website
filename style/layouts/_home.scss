@@ -1,6 +1,6 @@
 #home {
     background-image: url('img/lines.svg');
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
     background-position: left bottom 50px;
     background-size: 100%;
 
@@ -10,12 +10,22 @@
         max-width: 780px;
         margin: 0 auto;
 
+        @media(max-width: 979px){
+            flex-direction: column;
+        }
+
         .presentation {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             flex: 5;
             margin-right: 100px;
+
+            @media(max-width: 979px){
+                margin-right: 0;
+                align-items: center;
+                margin-bottom: 50px;
+            }
 
             h1 {
                 font-family: $font-fjalla;
@@ -34,6 +44,10 @@
                 font-weight: 300;
                 margin-bottom: 50px;
                 text-align: left;
+
+                @media(max-width: 979px){
+                    text-align: center;
+                }
             }
 
             .btn {
@@ -70,79 +84,6 @@
                 }
             }
         }
-
-        .info-cards {
-            background-color: $purple-2;
-            border-top-left-radius: 3px;
-            border-top-right-radius: 3px;
-            flex: 4;
-
-            .label {
-                display: block;
-                font-size: 12px;
-                margin-top: 10px;
-                text-transform: uppercase;
-            }
-
-            .number {
-                font-family: $font-fjalla;
-                font-size: 24px;
-                font-weight: 400;
-                line-height: 28px;
-            }
-
-            .text-card {
-                padding: 0 35px 20px;
-
-                .header {
-                    display: flex;
-                    justify-content: space-between;
-                    padding: 40px 0;
-
-                    .arrow {
-                        &:before {
-                            content: '';
-                            background-image: url('img/arrow.png');
-                            width: 23px;
-                            height: 19px;
-                            display: block;
-                            background-size: cover;
-                        }
-
-                    }
-
-                    span {
-                        color: $purple-10;
-                        font-family: $font-fjalla;
-                        font-size: 30px;
-                        font-weight: 400;
-                        line-height: 28px;
-                    }
-
-                }
-
-                .content {
-                    p {
-                        color: #212b36;
-                        font-family: $font-open;
-                        font-size: 14px;
-                    }
-                }
-            }
-
-            .performance-card {
-                background-color: #fff;
-                display: flex;
-                padding: 20px 15px;
-                align-items: center;
-                justify-content: space-between;
-                border-top: 1px solid #ddd;
-                
-                .graph {
-                    max-width: 170px;
-                }
-            }
-        }
     }
 
     .bottom-home {
@@ -161,9 +102,17 @@
                 padding: 45px 30px;
                 border-bottom: 1px solid #ddd;
 
+                @media(max-width: 979px){
+                    padding: 25px 30px;
+                }
+
                 ul {
                     display: flex;
                     justify-content: space-between;
+
+                    @media(max-width: 979px){
+                        flex-direction: column;
+                    }
 
                     li {
                         color: #575757;
@@ -175,9 +124,18 @@
                         padding: 0 30px;
                         flex: 1;
 
+                        @media(max-width: 979px){
+                            margin: 10px 0;
+                            border: 0;
+                        }
+
                         &:nth-child(2) {
                             border-right: 1px solid #ddd;
                             border-left: 1px solid #ddd;
+
+                            @media(max-width: 979px){
+                                border: 0;
+                            }
                         }
 
                         .icon {
@@ -217,6 +175,10 @@
                 padding: 50px 50px 10px;
                 display: flex;
 
+                @media(max-width: 979px){
+                    flex-direction: column;
+                }
+
                 .summary-text{
                     flex: 3;
 
@@ -238,6 +200,11 @@
                         font-weight: 400;
                         text-transform: uppercase;
                         text-align: right;
+
+                        @media(max-width: 979px){
+                            text-align: center;
+                            margin-top: 30px;
+                        }
                     }
                 }
             }
