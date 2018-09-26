@@ -16,11 +16,17 @@ menuLinks.forEach((link) => {
 window.addEventListener('scroll', e =>{
     e.preventDefault();
     var scrollPosition = document.documentElement.scrollTop;
-    if(scrollPosition > 0){
-        document.querySelector('header').classList.add('fixed');
-    }
-    else{
-        document.querySelector('header').classList.remove('fixed');
+    var windowSize = window.screen.width;
+    var header = document.querySelector('header');
+    if (windowSize > 1024){
+        if(scrollPosition > 0){
+            header.classList.add('fixed');
+        }
+        else{
+            header.classList.remove('fixed');
+        }
+    } else {
+        header.classList.add('fixed');
     }
 });
 
